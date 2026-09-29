@@ -1,0 +1,82 @@
+body {
+    width: 100%;
+    margin: 0;
+}
+
+.img-button {
+    width: clamp(20px, 75%, 50px);
+    height: clamp(20px, 75%, 50px);
+}
+
+.menu-b {
+    width: clamp(35px, 5vw, 60px);
+    height: clamp(35px, 5vh, 60px);
+    position: absolute;
+    left: 20px;
+    top: 35px;
+    background-color: white;
+    border: 2px ridge transparent;
+    transition: 0.3s;
+}
+
+.menu-b:hover {
+    border: 2px ridge blue;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 255, 0.250);
+}
+
+.menu-b:active {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+
+
+.Titulo {
+    font-size: clamp(28px, 7.5vw, 65px);
+    text-align: center;
+    font-family: impact;
+    font-weight: 100;
+    letter-spacing: 5px;
+    background: linear-gradient(to right, #0000ff, #23ffed);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+hr {
+    margin: auto;
+    width: 100%;
+    height: 2px;
+    background-color: darkblue;
+    border: none;
+}
+
+.Subtitulo {
+    margin: 2.5vw;
+    background: linear-gradient(to bottom, cyan, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(18px, 5vw, 32px);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+}
+
+.Descricao {
+    margin-left: 2.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(12px, 2.5vw, 18px);
+}
+.img-ods {
+    position: relative;
+    float: right;
+    width: 50vw;
+    height: auto;
+    margin: 2.5%;
+    mask-image: radial-gradient(ellipse, black, transparent 100%);
+    opacity: 0.65;
+    border-radius: 10%;
+}
