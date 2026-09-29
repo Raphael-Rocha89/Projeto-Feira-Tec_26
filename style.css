@@ -70,6 +70,7 @@ hr {
     font-family: Arial, Helvetica, sans-serif;
     font-size: clamp(12px, 2.5vw, 18px);
 }
+
 .img-ods {
     position: relative;
     float: right;
@@ -79,4 +80,85 @@ hr {
     mask-image: radial-gradient(ellipse, black, transparent 100%);
     opacity: 0.65;
     border-radius: 10%;
+}
+
+/*cadastro*/
+body {
+    background: radial-gradient(ellipse, blue, white);
+}
+
+.cadastro {
+    flex-direction: column;
+    width: clamp(300px, 55vw, 1200px);
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    text-align: center;
+    margin: auto;
+    border: 2px ridge gray;
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.250);
+    background-color: white;
+}
+
+.campo {
+    margin: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(14px, 2.5vw, 24px);
+    font-weight: 100;
+    text-decoration: underline;
+    padding: 3%;
+}
+
+.campo-i {
+    display: block;
+    margin: auto;
+    width: 25vw;
+    padding: 2.5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    background-color: rgba(173, 216, 230, 0.658);
+    border: 2px ridge transparent;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.campo-i:hover {
+    border-bottom: 2px ridge gray;
+    box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.345);
+}
+
+.button-cad {
+    margin-top: 5vw;
+    margin-bottom: 2.5vw;
+    border: 2px ridge transparent;
+    padding: 2.5%;
+    border-radius: 15px;
+    width: 15vw;
+    background-color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: clamp(6px, 2vw, 20px);
+    transition: 0.3s;
+}
+
+.button-cad:hover {
+    border: 2px solid rgba(128, 128, 128, 0.75);
+    background: radial-gradient(ellipse, blue, rgba(0, 255, 255, 0.75));
+}
+
+.t-cadastro {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    font-size: clamp(28px, 10vw, 65px);
+    background-image: linear-gradient(to bottom, cyan, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.sub-cadastro {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(12px, 2vw, 24px);
 }
