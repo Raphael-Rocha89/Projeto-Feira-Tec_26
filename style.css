@@ -82,21 +82,24 @@ hr {
     border-radius: 10%;
 }
 
-/*cadastro e login*/
+/*cadastro, login e Recuperação de senha */
+
 .body-cad {
     background: radial-gradient(ellipse, blue, white);
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .cadastro {
     flex-direction: column;
-    width: clamp(300px, 55vw, 1200px);
+    width: clamp(300px, 40vw, 1200px);
+    height: clamp(565px, 90vh, 1800px);
     padding-left: 2.5%;
     padding-right: 2.5%;
     text-align: center;
-    margin: auto;
+    margin: 2.5% auto;
     border: 2px ridge gray;
     border-radius: 15px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.250);
@@ -104,21 +107,21 @@ hr {
 }
 
 .campo {
-    margin: 20px;
+    margin: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: clamp(14px, 2.5vw, 24px);
+    font-size: clamp(12px, 2vw, 20px);
     font-weight: 100;
     text-decoration: underline;
-    padding: 3%;
+    padding: 1%;
 }
 
 .campo-i {
     display: block;
     margin: auto;
-    width: 25vw;
-    padding: 2.5%;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
+    width: 20vw;
+    padding: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     background-color: rgba(173, 216, 230, 0.658);
     border: 2px ridge transparent;
     border-radius: 20px;
@@ -131,8 +134,8 @@ hr {
 }
 
 .button-cad {
-    margin-top: 5vw;
-    margin-bottom: 2.5vw;
+    margin-top: 30px ;
+    margin-bottom: 30px;
     border: 2px ridge transparent;
     padding: 2.5%;
     border-radius: 15px;
@@ -141,7 +144,7 @@ hr {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: white;
-    font-size: clamp(6px, 2vw, 20px);
+    font-size: clamp(4px, 2vw, 18px);
     transition: 0.3s;
 }
 
@@ -156,7 +159,8 @@ hr {
 .t-cadastro {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 100;
-    font-size: clamp(28px, 10vw, 65px);
+    font-size: clamp(16px, 6vw, 55px);
+    margin: 20px;
     background-image: linear-gradient(to bottom, cyan, blue);
     background-clip: text;
     -webkit-background-clip: text;
@@ -165,18 +169,23 @@ hr {
 }
 
 .sub-cadastro {
+    margin-top: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(12px, 2vw, 24px);
+    font-size: clamp(12px, 1.8vw, 22px);
 }
 
+.base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 .login {
     flex-direction: column;
-    width: clamp(300px, 55vw, 1200px);
-    padding-top: 5%;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    text-align: center;
-    margin: 2.5% auto;
+    width: clamp(185px, 35vw, 900px);
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center; 
     border: 2px ridge gray;
     border-radius: 15px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.250);
@@ -200,4 +209,10 @@ hr {
     color: rgb(0, 0, 130);
     font-weight: 600;
     letter-spacing: 10%;
+}
+
+.icn-rec {
+    width: clamp(60px, 65%, 120px);
+    margin-top: 15px;
+    margin-bottom: auto;
 }
