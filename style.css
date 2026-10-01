@@ -65,12 +65,39 @@ hr {
     font-weight: 400;
 }
 
+.m-Subtitulo {
+    margin: 2.5vw;
+    color: rgb(35, 112, 159);
+    font-size: clamp(14px, 3.5vw, 26px);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+}
+
 .Descricao {
     margin-left: 2.5vw;
     font-family: Arial, Helvetica, sans-serif;
     font-size: clamp(12px, 2.5vw, 18px);
 }
-
+section {
+    padding: 10px;
+    border: 2px ridge transparent;
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.814), darkblue);
+    color: white;
+    position: relative;
+    float: right;
+    width: clamp(180px, 35vw, 320px);
+    margin: 40px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(14px, 6.5vw, 22px);
+    box-sizing: border-box;
+    box-shadow: 6px 6px 12px 1px black;
+    border-radius: 20px;
+}
+.s-Descricao {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(12px, 5vw, 18px);
+}
 .img-ods {
     position: relative;
     float: right;
@@ -80,6 +107,36 @@ hr {
     mask-image: radial-gradient(ellipse, black, transparent 100%);
     opacity: 0.65;
     border-radius: 10%;
+}
+.Acessar {
+    margin: 30px;
+    width: clamp(80px, 15vw, 145px);
+    height: clamp(45px, 7.5vh, 75px);
+    color: white;
+    background-color: rgb(65, 65, 243);
+    border: 2px dashed transparent;
+    border-radius: 15px;
+    transition: 0.3s;
+    font-size: clamp(10px, 4.5vw, 16px);
+}
+.Acessar:hover {
+    text-decoration: underline;
+    border: 2px dashed white;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.75);
+}
+
+.Acessar:hover::after {
+    animation:shine .8s;
+}
+@keyframes shine {
+    100%{left:150%;}
+}
+.Acessar:active{
+    background-color: rgb(235, 235, 235);
+    color: rgb(65, 65, 243);
+    transform: scale(0.925);
 }
 
 /*cadastro, login e Recuperação de senha */
