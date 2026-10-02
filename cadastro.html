@@ -11,26 +11,54 @@
     <div class="cadastro">
         <h1 class="t-cadastro">Cadastro</h1>
         <p class="sub-cadastro">Crie sua conta</p>
-        <form>
+        <form id="cadastro-form">
             <label for="nome" class="campo">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" class="campo-i">
+            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome" class="campo-i">
 
             <label for="email" class="campo">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" class="campo-i">
+            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail" class="campo-i">
 
-            <label for="usuario" class="campo">Usuário</label>
-            <input type="text" id="usuario" name="usuario" placeholder="Crie um usuário" class="campo-i">
+            <label for="usuario" class="campo">Nome de Usuário</label>
+            <input type="text" id="usuario" name="usuario" required placeholder="Crie um usuário" class="campo-i">
 
             <label for="senha" class="campo">Senha</label>
-            <input type="password" id="senha" name="senha" placeholder="Crie uma senha" class="campo-i">
+            <input type="password" id="senha" name="senha" required placeholder="Crie uma senha" class="campo-i"
+                minlength="8">
+            <ul class="requisitos" id="requisitos-senha">Requisitos para criação de senha:
+                <li>Deve ter pelo menos 8 caracteres</li>
+                <li>Deve conter pelo menos uma letra maiúscula</li>
+                <li>Deve conter pelo menos um número</li>
+                <li>Deve conter pelo menos um caractere especial (ex: .!@#$%^&*)</li>
+            </ul>
 
             <label for="confirmarSenha" class="campo">Confirmar senha</label>
-            <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Digite a senha novamente" class="campo-i">
+            <input type="password" id="confirmarSenha" name="confirmarSenha" required
+                placeholder="Digite a senha novamente" class="campo-i" minlength="8">
 
-            <button type="submit" class="button-cad">
+            <button type="submit" class="button-cad" id="button-cad" disabled>
                 Cadastrar
             </button>
         </form>
+        <script>
+            const formulario = document.getElementById('cadastro-form');
+            const botao = document.getElementById('button-cad');
+
+            formulario.addEventListener('input', () => {
+                botao.disabled = !formulario.checkValidity();
+            });
+        </script>
+        <script>
+            const senha = document.querySelector('#senha');
+            const requisitos = document.querySelector('#requisitos-senha');
+
+            senha.addEventListener('focus', () => {
+                requisitos.style.display = 'block';
+            });
+
+            senha.addEventListener('blur', () => {
+                requisitos.style.display = 'none';
+            });
+        </script>
         <p class="sub-cadastro">
             Já possui uma conta?
             <a href="login.html" class="link-c">Faça login</a>

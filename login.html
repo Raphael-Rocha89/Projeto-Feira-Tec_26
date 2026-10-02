@@ -13,15 +13,24 @@
             <h1 class="t-cadastro">Login</h1>
             <p class="sub-cadastro">Entre na sua conta</p>
 
-            <form>
+            <form id="login-form">
                 <label for="usuario" class="campo">Usuário</label>
-                <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário" class="campo-i">
-                
+                <input type="text" id="usuario" name="usuario" required placeholder="Digite seu usuário"
+                    class="campo-i">
+
                 <label for="senha" class="campo">Senha</label>
-                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" class="campo-i">
-                
-                <button type="submit" class="button-cad">Entrar</button>
+                <input type="password" id="senha" name="senha" required placeholder="Digite sua senha" class="campo-i" minlength="8">
+
+                <button type="submit" class="button-cad" id="button-cad" disabled>Entrar</button>
             </form>
+            <script>
+                const formulario = document.getElementById('login-form');
+                const botao = document.getElementById('button-cad');
+
+                formulario.addEventListener('input', () => {
+                    botao.disabled = !formulario.checkValidity();
+                });
+            </script>
 
             <a href="Rec-senha.html" class="link-c">Esqueci minha senha</a>
             <p class="sub-cadastro">
