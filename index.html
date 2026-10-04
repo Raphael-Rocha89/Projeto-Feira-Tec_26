@@ -13,32 +13,98 @@
     <header>
         <button class="menu-b"><img src="imagens/menu-burger.png" alt="Menu" class="img-button"></button>
         <h1 class="Titulo">S.I.M.G.A</h1>
+        <hr>
     </header>
-    <hr>
     <img src="imagens/ods6.gif" alt="ODS 6" class="img-ods">
-    <h2 class="Subtitulo">FEIRA TECNOLOGICA</h2>
-    <p class="Descricao">Projeto desenvolvido pela turma de Informática para Internet 1°C da ETEC M.C.M - CPS</p>
-    <button class="Acessar">Acessar</button>
-    <h2 class="Subtitulo">Nosso Projeto</h2>
-    <p class="Descricao">A água é essencial para a vida, mas seu desperdício e sua distribuição ainda são grandes
-        desafios. Vazamentos, consumo excessivo e falta de saneamento contribuem para a perda e a má utilização dos
-        recursos hídricos. Nossa proposta é utilizar tecnologia e sensores para economizar, monitorar e auxiliar na
-        gestão da água, em alinhamento com o ODS 6.</p>
-    <h2 class="Subtitulo">ODS 6</h2>
-    <h3 class="m-Subtitulo">Garantir disponibilidade e gestão sustentável da água e saneamento para todos</h3>
-    <p class="Descricao">O projeto está relacionado ao ODS 6 – Água Potável e Saneamento, que busca eliminar o
-        desperdício de água , além de promover o uso sustentável dos recursos hídricos com a reutilização da água . A
-        proposta contribui principalmente por meio da redução do desperdício e do melhor gerenciamento da água.</p>
-    <section>
-        <h3>Conheça o grupo:</h3>
-        <p class="s-Descricao">Raphael Rocha</p>
-        <p class="s-Descricao">Manuela Rosa</p>
-        <p class="s-Descricao">Sabrina Santana</p>
-        <p class="s-Descricao">Henrique Soares</p>
-        <p class="s-Descricao">Luan Morais</p>
-    </section>
-    <h2 class="Subtitulo">Desenvolvimento e propostas</h2>
-    <h2 class="Subtitulo">Como funciona?</h2>
-    <h2 class="Subtitulo">Proposta de solução</h2>
-    <h2 class="Subtitulo"> Público-alvo </h2>
-    <button class="button-saiba-mais">Saiba mais</button>
+    <button class="aviso-b" onclick="avisob()"><img src="imagens/exclamation.png" alt="aviso" class="icn-div"></button>
+    <div class="inicio" id="aviso-c">
+        <button class="aviso-f" onclick="avisof()">X</button>
+        <h2 class="i-Subtitulo">FEIRA TECNOLOGICA</h2>
+        <p class="i-Descricao">Evento promovido pela ETEC M.C.M - CPS. Projeto desenvolvido pela turma de Informática para Internet 1°C.</p>
+        <button class="Acessar">Acessar</button>
+    </div>
+    <script>
+        function avisob() {
+            document.getElementById("aviso-c").classList.add("aberto")
+        }
+        function avisof() {
+            document.getElementById("aviso-c").classList.remove("aberto")
+        }
+    </script>
+    <div class="FAQ">
+        <details class="detail">
+            <summary class="Subtitulo">Problemática</summary>
+            <p class="Descricao">A água é essencial para a vida, mas seu desperdício e sua distribuição ainda são
+                grandes
+                desafios. Vazamentos, consumo excessivo e falta de saneamento contribuem para a perda e a má utilização
+                dos
+                recursos hídricos. Nossa proposta é utilizar tecnologia e sensores para economizar, monitorar e auxiliar
+                na
+                gestão da água, em alinhamento com o ODS 6.</p>
+        </details>
+        <details class="detail">
+            <summary class="Subtitulo">ODS 6</summary>
+            <h3 class="m-Subtitulo">Garantir disponibilidade e gestão sustentável da água e saneamento para todos</h3>
+            <p class="Descricao">O projeto está relacionado ao ODS 6 – Água Potável e Saneamento, que busca eliminar o
+                desperdício de água , além de promover o uso sustentável dos recursos hídricos com a reutilização da
+                água .
+                A
+                proposta contribui principalmente por meio da redução do desperdício e do melhor gerenciamento da água.
+            </p>
+        </details>
+        <section>
+            <h3>Conheça o grupo:</h3>
+            <p class="s-Descricao">Raphael Rocha</p>
+            <p class="s-Descricao">Manuela Rosa</p>
+            <p class="s-Descricao">Sabrina Santana</p>
+            <p class="s-Descricao">Henrique Soares</p>
+            <p class="s-Descricao">Luan Morais</p>
+        </section>
+        <details>
+            <summary class="Subtitulo">Nossa proposta</summary>
+            <h3 class="m-Subtitulo">Tecnologias para uma gestão hídrica mais eficiente</h3>
+            <h4 class="Descricao">Monitorar:</h4>
+            <p class="Descricao">O sistema proposto utiliza sensores e dispositivos automatizados para monitorar o
+                consumo
+                de água. Os dados são enviados para essa plataforma, permitindo identificar desperdícios, acompanhar o
+                consumo e receber alertas sobre possíveis problemas.</p>
+            <h4 class="Descricao">Economizar:</h4>
+            <p class="Descricao">As torneiras inteligentes podem utilizar sensores de presença para liberar e
+                interromper
+                automaticamente o fluxo de água. Também podem possuir temporizadores, controle de vazão e medição do
+                consumo, ajudando a evitar desperdícios durante o uso cotidiano, a automação também permite que o
+                sistema
+                reaja automaticamente a determinadas situações. Ele poderia enviar alertas quando identificar consumo
+                anormal ou fechar temporariamente uma válvula em casos de possível vazamento.</p>
+        </details>
+        <details>
+            <summary class="Subtitulo">Como funciona?</summary>
+            <h3 class="m-Subtitulo">Um sistema inteligente com cobertura completa.</h3>
+            <p class="Descricao">O sistema funciona através da integração de sensores e dispositivos automatizados que
+                monitoram o consumo de água em tempo real. Os dados coletados são analisados por um software de gestão
+                que identifica padrões de uso, desperdícios e possíveis problemas, como vazamentos. Com base nessa
+                análise, o sistema pode enviar alertas para os usuários e até mesmo ajustar automaticamente o
+                funcionamento dos dispositivos para otimizar o consumo.</p>
+        </details>
+        <details>
+            <summary class="Subtitulo">Público-alvo</summary>
+            <h3 class="m-Subtitulo">Micro-empresas e residências</h3>
+            <p class="Descricao">O sistema é destinado a micro-empresas e residências que buscam otimizar o consumo de
+                água e reduzir desperdícios. A instalação do sistema permite que esses clientes tenham um controle mais
+                eficiente sobre seu consumo e possam identificar e resolver problemas de forma rápida e eficaz.
+                Futuramente pretendemos ampliar a cobertura do sistema para mais áreas.</p>
+        </details>
+    </div>
+
+    <!-- Adições pendentes:>
+- Adicionar gráficos de consumo de água e estatísticas relacionadas aoconsumo
+- Responsividade para dispositivos móveis
+- Melhorar a navegação e a estética do site
+- Adicionar links para redes sociais e contato
+- Implementar funcionalidades interativas, como quizzes ou simulações
+- Seção de notícias, atualizações sobre o projeto e dicas de consumo consciente de água
+- Adicionar html para o perfil do usuário.
+- Adicionar html para configurações do usuário<!-->
+</body>
+
+</html>
