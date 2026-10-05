@@ -1,9 +1,12 @@
+/* página principal */
 body {
     z-index: 1;
     width: 100%;
     margin: 0;
+    background-color: rgb(181, 176, 247);
 }
 
+/* NÃO CONFIRMADO
 .img-ods {
     mask-image: radial-gradient(ellipse, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
     z-index: -1;
@@ -14,17 +17,20 @@ body {
     background-size: cover;
     background-position: center;
     image-rendering: crisp-edges;
-}
+} 
+*/
 .img-button {
     width: clamp(20px, 75%, 50px);
     height: clamp(20px, 75%, 50px);
 }
+
 header {
     background-color: white;
     margin-top: -10px;
     padding-top: 10px;
     width: 100%;
 }
+
 .menu-b {
     width: clamp(35px, 5vw, 60px);
     height: clamp(35px, 5vh, 60px);
@@ -69,57 +75,7 @@ hr {
     border: none;
 }
 
-summary::before {
-    
-    content: " + ";
-    font-size: clamp(18px, 5vw, 32px);
-    color: blue;
-}
-details[open] summary::before {
-    content: " - ";
-}
-
-.Subtitulo {
-    cursor: pointer;
-    margin: 2.5vw;
-    width: clamp(250px, 35%, 400px);
-    background: linear-gradient(to bottom, cyan, blue);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: clamp(18px, 5vw, 32px);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 400;
-}
-
-.i-Subtitulo{
-    pointer-events: none;
-    text-align: center;
-    background: linear-gradient(to bottom, cyan, blue);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: clamp(18px, 5vw, 32px);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 400;
-}
-
-.m-Subtitulo {
-    margin: 2.5vw;
-    color: rgb(35, 112, 159);
-    font-size: clamp(14px, 3.5vw, 26px);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 200;
-}
-
-.Descricao {
-    text-align: justify;
-    margin-left: clamp(20px, 2.5vw, 40px);
-    margin-right: clamp(20px, 2.5vw, 40px);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(12px, 2.5vw, 18px);
-}
-
+/* Aviso */
 .i-Descricao {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -140,21 +96,24 @@ details[open] summary::before {
     margin: 20px 20px;
     width: clamp(30px, 20vw, 60px);
     height: clamp(30px, 20vw, 60px);
-    border: 2px ridge gray;
+    border: 2px solid black;
     border-radius: 50%;
     transition: 0.4s;
     background: rgb(238, 238, 238);
     box-shadow: 0px 2px 6px 2px gray;
 }
+
 .aviso-b:hover {
     box-shadow: 0px 2px 10px 2px rgb(76, 76, 76);
     background: white;
 }
+
 .aviso-b:active {
     transform: scale(0.85);
     background-color: rgb(65, 65, 243);
     border: 2px solid white;
 }
+
 .aviso-f {
     transition: 0.2s;
     width: clamp(22px, 2.5vw, 30px);
@@ -167,11 +126,13 @@ details[open] summary::before {
     float: left;
     box-shadow: 0px 2px 6px 1px black;
 }
+
 .aviso-f:hover {
     background-color: rgb(112, 112, 112);
     transform: scale(1.2);
     cursor: pointer;
 }
+
 .inicio {
     transition: 0.6s;
     position: fixed;
@@ -187,26 +148,10 @@ details[open] summary::before {
     border-radius: 20px;
     box-shadow: 0px 6px 18px 1px rgb(0, 0, 0);
 }
+
 .inicio.aberto {
     position: relative;
     top: 0%;
-}
-
-section {
-    padding: 10px;
-    border: 2px ridge transparent;
-    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.814), darkblue);
-    color: white;
-    position: relative;
-    float: right;
-    width: clamp(180px, 35vw, 320px);
-    margin: 30px;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: clamp(14px, 6.5vw, 22px);
-    box-sizing: border-box;
-    box-shadow: 6px 6px 12px 1px black;
-    border-radius: 20px;
 }
 
 .s-Descricao {
@@ -238,6 +183,222 @@ section {
     background-color: rgb(235, 235, 235);
     color: rgb(65, 65, 243);
     transform: scale(0.925);
+}
+
+.i-Subtitulo {
+    pointer-events: none;
+    text-align: center;
+    background: linear-gradient(to bottom, cyan, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(18px, 5vw, 32px);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+}
+
+/* FAQ */
+.FAQ {
+    background-color: white;
+    border-radius: 30px;
+    border: 2px dashed gray;
+    width: 95vw;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+section {
+    padding: 10px;
+    border: 2px ridge transparent;
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.814), darkblue);
+    color: white;
+    display: block;
+    float: right;
+    width: clamp(180px, 35vw, 320px);;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(14px, 6.5vw, 22px);
+    box-sizing: border-box;
+    box-shadow: 6px 6px 12px 1px black;
+    border-radius: 20px;
+}
+
+summary::before {
+    content: " + ";
+    font-size: clamp(18px, 5vw, 32px);
+    color: blue;
+}
+
+details[open] summary::before {
+    content: " - ";
+}
+
+.Subtitulo {
+    text-shadow: 0px 0px 25px rgb(65, 65, 243);
+    cursor: pointer;
+    margin: 2.5vw;
+    width: clamp(250px, 35%, 400px);
+    background: linear-gradient(to bottom, cyan, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(18px, 5vw, 32px);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+}
+
+.m-Subtitulo {
+    margin: 2.5vw;
+    color: rgb(35, 112, 159);
+    font-size: clamp(14px, 3.5vw, 26px);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+}
+
+.Descricao {
+    text-align: justify;
+    margin-left: clamp(20px, 2.5vw, 40px);
+    margin-right: clamp(20px, 2.5vw, 40px);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(12px, 2.5vw, 18px);
+}
+
+/*dashboard principal */
+.conteudo-d {
+    border: 3px solid rgba(128, 128, 128, 0.65);
+    background-color: rgba(255, 255, 255, 0.545);
+    box-shadow: 0px 3px 10px black;
+    border-radius: 30px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin: 40px auto;
+    width: 95vw;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 20px 20px auto;
+    padding: 15px;
+    border: 1px solid rgb(65, 65, 243);
+    border-radius: 20px;
+    width: clamp(200px, 65vw, 1200px);
+    height: auto;
+    box-shadow: 0px 4px 14px rgba(28, 23, 83, 0.85);
+    background-color: white;
+}
+
+.info-l {
+    box-shadow: 0px 2px 8px black;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+    width: clamp(100px, 20vw, 300px);
+    height: auto;
+}
+
+.dicas-d {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: clamp(12px, 3.5vw, 28px);
+    background: linear-gradient(to bottom, cyan, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.texto-d {
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.top-d {
+    width: 100%;
+    padding: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.span-d {
+    background-color: rgb(65, 65, 243);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    position: relative;
+    float: left;
+    text-align: center;
+    margin: 5px 15px auto auto;
+    box-shadow: 1px 1px 6px black;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 1%;
+    width: clamp(10px, 5vw, 20px);
+    height: auto;
+}
+
+.dash-p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+}
+
+.grafico-d {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: block;
+    margin: auto 25px 25px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    width: clamp(70px, 10vw, 200px);
+    text-align: center;
+    box-shadow: 0px 2px 10px gray;
+}
+
+.selector-d {
+    width: 120px;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.selector {
+    accent-color: rgb(102, 102, 102);
+    width: 10px;
+    height: 10px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.76);
+    transition: 0.2s;
+}
+
+.selector:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.selector:active {
+    background-color: white;
+    transform: scale(1.5);
+}
+
+.secao-d {
+    opacity: 0.6;
+    background-color: gray;
+}
+
+.grafico-dg2 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin: 10px auto;
 }
 
 /*cadastro, login e Recuperação de senha */
@@ -291,11 +452,13 @@ section {
     border: 5px solid rgba(80, 80, 225, 0.2);
     box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.345);
 }
+
 @media (max-width: 600px) {
     .campo-i:focus {
         width: 65%;
     }
 }
+
 .campo-i:user-valid {
     border: 5px solid rgba(80, 225, 80, 0.3);
     background-color: rgba(40, 180, 30, 0.35);
@@ -310,6 +473,7 @@ section {
     border-bottom: 2px ridge gray;
     box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.345);
 }
+
 .requisitos {
     display: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -319,6 +483,7 @@ section {
     margin-right: 20%;
     transition: 0.3s;
 }
+
 .button-cad {
     margin-top: 30px;
     margin-bottom: 30px;
