@@ -3,6 +3,7 @@ body {
     z-index: 1;
     width: 100%;
     margin: 0;
+    padding: 0;
     background-color: rgb(181, 176, 247);
 }
 
@@ -19,43 +20,93 @@ body {
     image-rendering: crisp-edges;
 } 
 */
-.img-button {
-    width: clamp(20px, 75%, 50px);
-    height: clamp(20px, 75%, 50px);
-}
-
-header {
+/* Topo da página */
+.topo-p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    margin: -10px auto;
     background-color: white;
-    margin-top: -10px;
-    padding-top: 10px;
     width: 100%;
+    text-align: left;
+    border-bottom: 3px solid darkblue;
 }
-
-.menu-b {
-    width: clamp(35px, 5vw, 60px);
-    height: clamp(35px, 5vh, 60px);
-    position: absolute;
-    left: 20px;
-    top: 35px;
+.conjunto-t {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    float: right;
+    position: relative;
+    width: 45%;
+}
+.conjunto-t a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blue;
+    letter-spacing: normal;
+    transition: 0.3s ease;
+}
+.conjunto-t a:hover {
+    letter-spacing: 10%;
+    text-shadow: 0px 0px 2px blue;
+}
+.config-b {
+    padding: 10px;
+    border: none;
     background-color: white;
-    border: 2px ridge transparent;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    border-radius: 50% ;
+    align-items: center;
+    justify-content: center;
+}
+.config-b:hover {
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.35 );
+    transform: rotate(180deg);
+}
+.img-b {
+    width: clamp(20px, 10vw, 40px);
+    height: clamp(20px, 10vw, 40px);
 }
 
-.menu-b:hover {
-    border: 2px ridge blue;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 255, 0.250);
+.login-b {
+    font-size: clamp(6px, 3.5vw, 16px);
+    width: clamp(90px, 10vw, 120px);
+    padding: 10px;
+    border: 1px solid blue;
+    border-radius: 30px;
+    background-color: blue;
+    color: white;
+    box-shadow: 1px 1px 4px black;
+    transition: 0.2s ease;
 }
 
-.menu-b:active {
+.login-b:hover, .cad-b:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+    font-weight: 600;
+    border: 3px solid rgba(0, 0, 255, 0.5);
+    box-shadow: 2px 2px 8px black;
+}
+.cad-b {
+    border: 1px solid blue;
+    border-radius: 30px;
+    padding: 10px;
     background-color: white;
-    transform: scale(1.1);
+    color: blue;
+    width: clamp(90px, 10vw, 120px);
+    font-size: clamp(6px, 3.5vw, 16px);
+    box-shadow: 1px 1px 4px black;
+    transition: 0.2s ease;
 }
-
 .Titulo {
+    margin: 15px auto;
     font-size: clamp(28px, 7.5vw, 65px);
-    text-align: center;
     font-family: impact;
     font-weight: 100;
     letter-spacing: 5px;
@@ -63,8 +114,6 @@ header {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 10px;
-    margin-bottom: 20px;
 }
 
 hr {
