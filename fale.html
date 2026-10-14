@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body-cad">
+    <div class="cadastro">
+        <a href="index.html" style="text-decoration: none; cursor: default;"><button class="c-mensagem" href="index.html">X</button></a>
+        <h1 class="t-cadastro">Fale Conosco</h1>
+        <form id="f-mensagem">
+            <label class="campo" for="nome">Nome</label>
+            <input class="campo-i" type="text" id="nome" placeholder="Digite seu nome" required name="nome">
+            <label class="campo" for="email">Email</label>
+            <input class="campo-i" type="email" id="email" placeholder="Digite um email para contato" required
+                name="email">
+            <label class="campo" for="assunto">Assunto</label>
+            <input class="campo-i" type="text" id="assunto" placeholder="Digite o principal tema da sua mensagem"
+                name="assunto">
+            <label class="campo" for="mensagem">Mensagem</label>
+            <textarea class="campo-m" id="mensagem" placeholder="Sua mensagem aqui" name="mensagem" required></textarea>
+        </form>
+        <button form="f-mensagem" class="button-cad">Enviar</button>
+    </div>
+</body>
+
+</html>
