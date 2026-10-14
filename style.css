@@ -1,4 +1,7 @@
 /* página principal */
+html {
+    scroll-behavior: smooth;
+}
 body {
     z-index: 1;
     width: 100%;
@@ -134,7 +137,7 @@ hr {
 }
 .pagina-i span {
     text-shadow: 0px 0px 32px white;
-    background: linear-gradient(to right, blue, midnightblue, blue);
+    background: linear-gradient(to right, darkblue, blue, cyan);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -160,7 +163,7 @@ hr {
     margin: 10px 10px auto;
     border-radius: 50%;
     border: 1px solid gray;
-    padding: 20px;
+    padding: 5px 10px;
     box-shadow: inset 0px 0px 8px gray;
 }
 .card-t {
@@ -706,4 +709,19 @@ details[open] summary::before {
     transform: scale(0.9);
     background-color: rgba(128, 128, 128, 0.3);
 }
-/* Teste */
+/* rodapé */
+.termos {
+    margin-bottom: auto;
+    background-color: rgb(220, 220, 220);
+    display: flex;
+    border: 1px ridge black;
+    padding: 5px 15px;
+    height: 60px;
+    text-align: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    font-size: clamp( 12px, 4vw, 18px);
+    letter-spacing: 3.5%;
+    text-decoration: underline gray;
+}
