@@ -133,7 +133,41 @@ hr {
     text-shadow: 0px 0px 18px gray;
 }
 .pagina-i span {
-    color: rgb(58, 58, 255);
+    text-shadow: 0px 0px 32px white;
+    background: linear-gradient(to right, blue, midnightblue, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.base-c {
+    margin: clamp(120px, 20vh, 300px) auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-b {
+    display: flex;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 16px rgb(65, 65, 243);
+    border: 1px solid black;
+    border-radius: 15px;
+    width: clamp(120px, 30vw, 450px);
+    height: clamp(75px, 20vh, 200px);
+}
+.card-1 {
+    position: relative;
+    margin: 10px 10px auto;
+    border-radius: 50%;
+    border: 1px solid gray;
+    padding: 20px;
+    box-shadow: inset 0px 0px 8px gray;
+}
+.card-t {
+    text-align: center;
+    border: 2px solid green;
+    margin: auto;
+    height: 20px;
 }
 /* Aviso */
 .i-Descricao {
