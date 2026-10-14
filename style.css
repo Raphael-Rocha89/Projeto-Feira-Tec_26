@@ -461,7 +461,7 @@ details[open] summary::before {
     margin: 10px auto;
 }
 
-/*cadastro, login e Recuperação de senha */
+/*cadastro, login, Recuperação de senha e fale conosco */
 
 .body-cad {
     background: radial-gradient(ellipse, blue, white);
@@ -506,7 +506,7 @@ details[open] summary::before {
     border-radius: 20px;
     transition: 0.3s;
 }
-
+.campo-m:focus,
 .campo-i:focus {
     outline: none;
     border: 5px solid rgba(80, 80, 225, 0.2);
@@ -518,7 +518,7 @@ details[open] summary::before {
         width: 65%;
     }
 }
-
+.campo-m:user-valid,
 .campo-i:user-valid {
     border: 5px solid rgba(80, 225, 80, 0.3);
     background-color: rgba(40, 180, 30, 0.35);
@@ -528,7 +528,7 @@ details[open] summary::before {
     border: 5px solid rgba(225, 80, 80, 0.3);
     background-color: rgba(180, 30, 30, 0.35);
 }
-
+.campo-m:not(:focus):hover,
 .campo-i:not(:focus):hover {
     border-bottom: 2px ridge gray;
     box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.345);
@@ -639,4 +639,37 @@ details[open] summary::before {
     margin-bottom: auto;
 }
 
+.campo-m {
+    margin: 2.5%;
+    width: clamp(60px, 80%, 900px);
+    height: clamp(40px, 20vh, 350px);
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: left;
+    background-color: rgba(173, 216, 230, 0.658);
+    transition: 0.2s;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+.c-mensagem {
+    border: 1px solid rgba(128, 128, 128, 0.75);
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    margin: 40px 0px 0px 0px;
+    padding: 10px;
+    transition: 0.3s;
+}
+.c-mensagem:hover {
+    cursor: pointer;
+    border: 1px solid gray;
+    transform: scale(0.9);
+}
+.c-mensagem:active {
+    border: 2px solid black;
+    transform: scale(0.9);
+    background-color: rgba(128, 128, 128, 0.3);
+}
 /* Teste */
