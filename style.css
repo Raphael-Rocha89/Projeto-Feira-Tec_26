@@ -2,12 +2,13 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     z-index: 1;
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: rgb(181, 176, 247);
+    background-color: rgba(0, 0, 255, 0.35);
 }
 
 .topo-p {
@@ -23,51 +24,66 @@ body {
     text-align: left;
     border-bottom: 3px solid darkblue;
 }
+
 .conjunto-t {
     justify-content: space-between;
     display: flex;
     align-items: center;
     margin: auto;
-    float: right;
-    position: relative;
-    width: 45%;
+    width: clamp(100px, 60%, 900px);
 }
+
+.topo-l,
+.topo-m {
+    display: flex;
+    justify-content: space-between;
+    width: 42.5%;
+    align-items: center;
+}
+
 .conjunto-t a {
     text-decoration: none;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(6px, 3.5vw, 16px);
     color: blue;
     letter-spacing: normal;
     transition: 0.3s ease;
 }
+
 .conjunto-t a:hover {
-    letter-spacing: 10%;
-    text-shadow: 0px 0px 2px blue;
+    color: rgb(51, 126, 151);
+    letter-spacing: 5%;
+    text-shadow: 0px 0px 1px blue;
 }
+
 .config-b {
-    height: 60px;
-    width: 60px;
+    height: clamp(25px, 100%, 60px);
+    width: clamp(25px, 100%, 60px);
     padding: 10px;
     border: none;
     background-color: white;
-    transition: 0.3s ease;
-    border-radius: 50% ;
+    transition: 0.4s ease;
+    border-radius: 50%;
     align-items: center;
     justify-content: center;
 }
+
 .config-b:hover {
     border-radius: 50%;
-    background-color: rgba(128, 128, 128, 0.35 );
-    transform: rotate(180deg);
+    background-color: rgba(128, 128, 128, 0.35);
+    transform: rotate(270deg);
+    cursor: pointer;
 }
+
 .img-b {
-    width: clamp(20px, 10vw, 40px);
-    height: clamp(20px, 10vw, 40px);
+    width: clamp(10px, 100%, 40px);
+    height: clamp(10px, 100%, 40px);
 }
 
 .login-b {
     font-size: clamp(6px, 3.5vw, 16px);
-    width: clamp(90px, 10vw, 120px);
+    width: clamp(65px, 10vw, 110px);
     padding: 10px;
     border: 1px solid blue;
     border-radius: 30px;
@@ -77,24 +93,27 @@ body {
     transition: 0.2s ease;
 }
 
-.login-b:hover, .cad-b:hover {
-    transform: scale(1.15);
+.login-b:hover,
+.cad-b:hover {
+    transform: scale(1.1);
     cursor: pointer;
     font-weight: 600;
     border: 3px solid rgba(0, 0, 255, 0.5);
     box-shadow: 2px 2px 8px black;
 }
+
 .cad-b {
     border: 1px solid blue;
     border-radius: 30px;
     padding: 10px;
     background-color: white;
     color: blue;
-    width: clamp(90px, 10vw, 120px);
+    width: clamp(75px, 10vw, 120px);
     font-size: clamp(6px, 3.5vw, 16px);
     box-shadow: 1px 1px 4px black;
     transition: 0.2s ease;
 }
+
 .Titulo {
     margin: 15px auto;
     font-size: clamp(28px, 7.5vw, 65px);
@@ -114,63 +133,92 @@ hr {
     background-color: darkblue;
     border: none;
 }
+
 .pagina-i {
-    background-color: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.9), rgba(24, 23, 23, 0.6));
     text-align: center;
-    padding: 10px;
-    margin: 20px auto;
-    width: clamp(550px, 95vw, 1350px);
-    border: 2px solid rgb(65, 65, 243);
-    border-radius: 25px;
+    margin: auto;
+    padding-top: 90px;
+    padding-bottom: 5px;
+    width: 100%;
 }
+
 .titulo-p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: clamp(28px, 15vw, 54px);
     color: rgb(39, 138, 199);
-    text-shadow: 0px 0px 32px white;
+    text-shadow: 0px 0px 8px blue;
 }
+
 .Subtitulo-p {
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: clamp(16px, 5vw, 28px);
-    text-shadow: 0px 0px 18px gray;
+    text-shadow: 0px 0px 18px darkblue;
 }
+
 .pagina-i span {
-    text-shadow: 0px 0px 32px white;
-    background: linear-gradient(to right, darkblue, blue, cyan);
+    font-size: clamp(45px, 30vw, 90px);
+    text-shadow: 0px 0px 32px rgba(0, 0, 255, 0.015);
+    background: linear-gradient(to right, rgba(0, 0, 139, 0.75), rgba(0, 0, 255, 0.75), cyan);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .base-c {
     margin: clamp(120px, 20vh, 300px) auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 97.5%;
 }
+
 .card-b {
-    display: flex;
     padding: 5px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 16px rgb(65, 65, 243);
+    box-shadow: 0px 0px 8px rgb(65, 65, 243);
     border: 1px solid black;
     border-radius: 15px;
     width: clamp(120px, 30vw, 450px);
-    height: clamp(75px, 20vh, 200px);
+    height: clamp(145px, 40vh, 600px);
 }
-.card-1 {
-    position: relative;
-    margin: 10px 10px auto;
-    border-radius: 50%;
-    border: 1px solid gray;
-    padding: 5px 10px;
-    box-shadow: inset 0px 0px 8px gray;
-}
+
 .card-t {
-    text-align: center;
-    border: 2px solid green;
     margin: auto;
+    width: 95%;
     height: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blue;
+    border-top: 2px solid gray;
+}
+
+.img-card {
+    width: 100%;
+    height: 70%;
+    border-radius: 15px;
+}
+.card-b p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(8px, 2.5vw, 16px);
+}
+.button-m {
+    margin-top: 40px;
+    width: clamp(80px, 20vw, 200px);
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: clamp(12px, 3.5vw, 18px);
+    background-color: blue;
+    color: white;
+    border: 2px dashed transparent;
+    border-radius: 20px;
+    box-shadow: 0px 4px 16px rgba(128, 128, 128, 0.4);
+    transition: 0.2s;
+}
+.button-m:hover{
+    cursor: pointer;
+    border: 2px dashed white;
 }
 /* Aviso */
 .i-Descricao {
@@ -187,17 +235,18 @@ hr {
 }
 
 .aviso-b {
+    position: absolute;
     cursor: pointer;
     z-index: 1;
     text-align: center;
-    margin: 20px 20px;
+    margin: 40px 20px auto 20px;
     width: clamp(30px, 20vw, 60px);
     height: clamp(30px, 20vw, 60px);
     border: 2px solid black;
     border-radius: 50%;
-    transition: 0.4s;
+    transition: 0.2s;
     background: rgb(238, 238, 238);
-    box-shadow: 0px 2px 6px 2px gray;
+    box-shadow: 0px 0px 4px 1px gray;
 }
 
 .aviso-b:hover {
@@ -231,7 +280,7 @@ hr {
 }
 
 .inicio {
-    transition: 0.6s;
+    transition: 0.6s ease-out;
     position: fixed;
     top: -200%;
     left: 50%;
@@ -247,15 +296,15 @@ hr {
 }
 
 .inicio.aberto {
-    position: relative;
-    top: 0%;
+    position: fixed;
+    top: 15%;
 }
 
 .s-Descricao {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: clamp(12px, 5vw, 18px);
 }
-
+.button-m,
 .Acessar {
     margin: 30px;
     width: clamp(80px, 15vw, 145px);
@@ -267,7 +316,7 @@ hr {
     transition: 0.2s;
     font-size: clamp(10px, 4.5vw, 16px);
 }
-
+.button-m:hover,
 .Acessar:hover {
     text-decoration: underline;
     border: 2px dashed white;
@@ -275,7 +324,7 @@ hr {
     font-weight: bold;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.75);
 }
-
+.button-m:active,
 .Acessar:active {
     background-color: rgb(235, 235, 235);
     color: rgb(65, 65, 243);
@@ -311,7 +360,8 @@ section {
     color: white;
     display: block;
     float: right;
-    width: clamp(180px, 35vw, 320px);;
+    width: clamp(180px, 35vw, 320px);
+    ;
     margin: 10px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -504,18 +554,20 @@ details[open] summary::before {
     background: radial-gradient(ellipse, blue, white);
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow-x: hidden;
 }
 
 .cadastro {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
     flex-direction: column;
     width: clamp(300px, 40vw, 1200px);
-    height: clamp(565px, 90vh, 1800px);
-    padding-left: 2.5%;
-    padding-right: 2.5%;
+    padding: 10px 2.5%;
     text-align: center;
-    margin: 2.5% auto;
     border: 2px ridge gray;
     border-radius: 15px;
     box-shadow: 0px 0px 16px blue;
@@ -543,6 +595,7 @@ details[open] summary::before {
     border-radius: 20px;
     transition: 0.3s;
 }
+
 .campo-m:focus,
 .campo-i:focus {
     outline: none;
@@ -555,6 +608,7 @@ details[open] summary::before {
         width: 65%;
     }
 }
+
 .campo-m:user-valid,
 .campo-i:user-valid {
     border: 5px solid rgba(80, 225, 80, 0.3);
@@ -565,9 +619,10 @@ details[open] summary::before {
     border: 5px solid rgba(225, 80, 80, 0.3);
     background-color: rgba(180, 30, 30, 0.35);
 }
+
 .campo-m:not(:focus):hover,
 .campo-i:not(:focus):hover {
-    border-bottom: 2px ridge gray;
+    border-bottom: 2px solid gray;
     box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.345);
 }
 
@@ -582,8 +637,7 @@ details[open] summary::before {
 }
 
 .button-cad {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px auto;
     border: 2px ridge transparent;
     padding: 2.5%;
     border-radius: 15px;
@@ -612,10 +666,13 @@ details[open] summary::before {
 }
 
 .t-cadastro {
+    display: flex;
+    justify-content: center;
+    width: 60%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 100;
     font-size: clamp(16px, 6vw, 55px);
-    margin: 20px;
+    margin: auto;
     background-image: linear-gradient(to bottom, cyan, blue);
     background-clip: text;
     -webkit-background-clip: text;
@@ -681,7 +738,7 @@ details[open] summary::before {
     width: clamp(60px, 80%, 900px);
     height: clamp(40px, 20vh, 350px);
     padding: 10px;
-    border: 2px solid black;
+    border: 2px solid transparent;
     border-radius: 15px;
     text-align: left;
     background-color: rgba(173, 216, 230, 0.658);
@@ -690,25 +747,73 @@ details[open] summary::before {
     overflow-wrap: break-word;
     white-space: pre-wrap;
 }
+
 .c-mensagem {
-    border: 1px solid rgba(128, 128, 128, 0.75);
+    font-size: clamp(20px, 100vw, 28px);
+    height: clamp(20px, 10vh, 50px);
+    width: clamp(20px, 10%, 50px);
+    border: 1px solid transparent;
     border-radius: 50%;
     background-color: transparent;
-    display: flex;
-    margin: 40px 0px 0px 0px;
-    padding: 10px;
+    position: absolute;
+    margin: 10px -15px;
     transition: 0.3s;
 }
+
 .c-mensagem:hover {
     cursor: pointer;
     border: 1px solid gray;
     transform: scale(0.9);
 }
+
 .c-mensagem:active {
     border: 2px solid black;
     transform: scale(0.9);
     background-color: rgba(128, 128, 128, 0.3);
 }
+
+/* botões e icones */
+.contato-a {
+    margin: 2.5% auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+}
+
+.contato-a h2 {
+    font-size: clamp(8px, 1.5vw, 12px);
+}
+
+.container-b {
+    width: 50%;
+}
+
+.imagem-l {
+    width: 90%;
+    height: 90%;
+}
+
+.contato-b {
+    width: clamp(25px, 5vw, 50px);
+    border: 2px ridge transparent;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: 0.2s;
+    padding: 5px;
+}
+
+.contato-b:hover {
+    background-color: rgba(156, 156, 156, 0.275);
+    cursor: pointer;
+}
+
+.contato-b:active {
+    transform: scale(0.85);
+    border: 2px ridge gray;
+}
+
 /* rodapé */
 .termos {
     margin-bottom: auto;
@@ -721,7 +826,7 @@ details[open] summary::before {
     align-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: normal;
-    font-size: clamp( 12px, 4vw, 18px);
+    font-size: clamp(12px, 4vw, 18px);
     letter-spacing: 3.5%;
     text-decoration: underline gray;
 }
